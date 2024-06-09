@@ -1,0 +1,44 @@
+#include<graphics.h>
+#include<conio.h>
+#include<math.h>
+#include<iostream.h>
+#include<dos.h>
+
+int main()
+{
+	int x,y,r,p, gd=DETECT,gm;
+	initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+	clrscr();
+	cout<<"\nEnter center coordinates of circle:";
+	cin>>x>>y;
+	cout<<"\nEnter radius of circle:";
+	cin>>r;
+	 p=1-r;
+	 putpixel(0,r,RED);
+	while(x<=y)
+	{
+		if(p>=0)
+		{
+		 x=x+1;
+		 y=y-1;
+		 p=p+2*(x-y)+1;
+		}
+		else
+		{
+		 x=x+1;
+		 p=p+(2*x)+1;
+		}
+
+		putpixel(x,y,RED);
+		putpixel(y,x,RED);
+		putpixel(-y,x,RED);
+		putpixel(x,-y,RED);
+		putpixel(-x,-y,RED);
+		putpixel(-y,-x,RED);
+		putpixel(-y,x,RED);
+	}
+
+
+	getch();
+	return 0;
+}

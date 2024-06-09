@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+#include<dos.h>
+#define SIZE 5
+
+int isfull()
+	{
+		int top;
+		if(top==SIZE-1){
+			return(1);
+		}else{
+			return(0);
+		}
+	}
+	
+	if(isfull== 1)
+		{
+			cout<<"\nStack is overflow: ";
+		}
+		else{
+			top=top+1;
+			stack[top]=ele;
+		}
+		
+int main()
+{
+	int stack[SIZE]={10,20,30,40,50},i;
+	int isfull();
+	void push()
+	{
+		int ele;
+		cout<<"Enter the element to push: ";
+		cin>>ele;
+		if(isfull== 1);
+		
+		
+	}
+	return 0;
+}
